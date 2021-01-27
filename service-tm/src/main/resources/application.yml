@@ -7,14 +7,15 @@ spring:
     name: service-tm
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1/seata_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username:
-    password:
+    url: jdbc:mysql://120.78.157.251:3306/seata_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Teamer2018.
     type: com.alibaba.druid.pool.DruidDataSource
   cloud:
     nacos:
       discovery:
-        server-addr:
+        server-addr: 114.116.14.26:8848
+        namespace: 8f11aeb1-5042-461b-b88b-d47a7f7e01c0
 
 seata:
   enabled: true
@@ -33,5 +34,5 @@ seata:
       cluster: default
       group: DEFAULT_GROUP
       application: seata-server
-      server-addr:
+      server-addr: 114.116.14.26:8848
       namespace: 8f11aeb1-5042-461b-b88b-d47a7f7e01c0
